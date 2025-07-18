@@ -1,14 +1,7 @@
 {
     "name": "PHP & Node.js",
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
-    "features": {
-        "ghcr.io/devcontainers/features/php:1": {
-            "version": "8.2"
-        },
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "lts"
-        }
-    },
+    "image": "mcr.microsoft.com/devcontainers/php:8.2",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y nodejs npm && sudo docker-php-ext-install pdo_mysql mysqli",
     "forwardPorts": [8000, 3000],
     "portsAttributes": {
         "8000": {
