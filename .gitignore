@@ -1,0 +1,45 @@
+# Laravel specific
+/backend/vendor/
+/backend/node_modules/
+/backend/.env
+/backend/storage/*.key
+/backend/public/hot
+/backend/public/storage
+/backend/bootstrap/cache/*.php
+/backend/Homestead.yaml
+/backend/Homestead.json
+/backend/.vagrant/
+/backend/build/
+/backend/mix-manifest.json
+/backend/npm-debug.log
+/backend/yarn-error.log
+/backend/webpack.mix.js
+/backend/notary-management-system.zip
+
+# React specific
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+/frontend/.history/
+/frontend/npm-debug.log
+/frontend/yarn-error.log
+/frontend/build/
+
+# General
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.bak
+*.swp
+*.swo
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.sql
+/notary-management-system-final.zip

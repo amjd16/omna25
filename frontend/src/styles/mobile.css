@@ -1,0 +1,272 @@
+/* Mobile Responsive Styles */
+
+/* Base mobile styles */
+@media (max-width: 768px) {
+  /* Container adjustments */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Grid adjustments */
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  /* Text size adjustments */
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  /* Padding adjustments */
+  .p-6 {
+    padding: 1rem;
+  }
+
+  .p-8 {
+    padding: 1.5rem;
+  }
+
+  /* Margin adjustments */
+  .mb-6 {
+    margin-bottom: 1rem;
+  }
+
+  .mb-8 {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Card adjustments */
+  .rounded-xl {
+    border-radius: 0.75rem;
+  }
+
+  /* Button adjustments */
+  .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Table responsive */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-responsive table {
+    min-width: 600px;
+  }
+
+  /* Form adjustments */
+  .form-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+
+  /* Navigation adjustments */
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Bottom navigation space */
+  .main-content {
+    padding-bottom: 5rem; /* Space for bottom navigation */
+  }
+
+  /* Touch targets */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Scroll improvements */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide desktop elements */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Show mobile elements */
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .text-lg {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .p-4 {
+    padding: 0.75rem;
+  }
+
+  .px-4 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Smaller cards on very small screens */
+  .card-small {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Adjust font sizes for readability */
+  .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .landscape-adjust {
+    height: auto;
+    min-height: auto;
+  }
+
+  .mobile-nav {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .mobile-nav button {
+    padding: 0.25rem;
+  }
+
+  .mobile-nav .text-xs {
+    font-size: 0.625rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icon-crisp {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-mobile {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+
+  .dark-mode-mobile .bg-white {
+    background-color: #374151;
+  }
+
+  .dark-mode-mobile .text-gray-900 {
+    color: #f9fafb;
+  }
+
+  .dark-mode-mobile .text-gray-600 {
+    color: #d1d5db;
+  }
+
+  .dark-mode-mobile .border-gray-200 {
+    border-color: #4b5563;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .transition-all,
+  .transition-colors,
+  .transition-transform {
+    transition: none !important;
+  }
+
+  .animate-spin {
+    animation: none !important;
+  }
+}
+
+/* Focus improvements for mobile */
+.focus-visible:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Safe area adjustments for notched devices */
+@supports (padding: max(0px)) {
+  .safe-area-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+
+  .safe-area-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+
+  .mobile-nav {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-full-width {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .print-break-before {
+    page-break-before: always;
+  }
+
+  .print-break-after {
+    page-break-after: always;
+  }
+}
+
