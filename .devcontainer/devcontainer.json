@@ -1,0 +1,23 @@
+{
+    "name": "PHP & Node.js",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+        "ghcr.io/devcontainers/features/php:1": {
+            "version": "8.2"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        }
+    },
+    "forwardPorts": [8000, 3000],
+    "portsAttributes": {
+        "8000": {
+            "label": "Laravel Backend",
+            "onAutoForward": "openBrowser"
+        },
+        "3000": {
+            "label": "React Frontend",
+            "onAutoForward": "openBrowser"
+        }
+    }
+}
