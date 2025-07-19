@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://psychic-giggle-r6vvjjvwrp62pv6-8000.app.github.dev/api';
 
 // إنشاء instance من axios
 const api = axios.create({
