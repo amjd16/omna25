@@ -1,16 +1,18 @@
 {
-    "name": "PHP & Node.js",
-    "image": "mcr.microsoft.com/devcontainers/php:8.2",
-    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y nodejs npm && sudo docker-php-ext-install pdo_mysql mysqli",
-    "forwardPorts": [8000, 3000],
-    "portsAttributes": {
-        "8000": {
-            "label": "Laravel Backend",
-            "onAutoForward": "openBrowser"
-        },
-        "3000": {
-            "label": "React Frontend",
-            "onAutoForward": "openBrowser"
+    "name": "PHP, Node.js & MySQL",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "18"
         }
-    }
+    },
+    "forwardPorts": [8000, 5173, 3306],
+    "portsAttributes": {
+        "8000": {"label": "Laravel Backend"},
+        "5173": {"label": "React Frontend"},
+        "3306": {"label": "MySQL"}
+    },
+    "postCreateCommand": "sudo chown -R vscode:vscode . && composer install && (cd frontend && npm install)"
 }
